@@ -1,0 +1,5 @@
+.config
+.helper
+build-debug
+vim.sh
+**/*.o

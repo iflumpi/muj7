@@ -1,0 +1,6 @@
+NOP
+NOP
+LD A,B
+LD B,C
+LD A,40
+JP 2
