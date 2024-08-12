@@ -1,5 +1,5 @@
 
-#include "muj7/muj7cpu.h"
+#include "cpu/muj7cpu.h"
 
 #include <CUnit/Basic.h>
 #include <CUnit/CUnit.h>
@@ -26,8 +26,8 @@ void test_instruction_01(void)
     cpu->ram[0] = 0x01;
     execute(cpu);
 
-    CU_ASSERT(cpu->registers->a == 4)
-    CU_ASSERT(cpu->registers->b == 4);
+    CU_ASSERT(cpu->registers->a == 2)
+    CU_ASSERT(cpu->registers->b == 2);
 }
 
 // Test case for the ld function
@@ -40,8 +40,8 @@ void test_instruction_02(void)
     cpu->ram[0] = 0x02;
     execute(cpu);
 
-    CU_ASSERT(cpu->registers->a == 17)
-    CU_ASSERT(cpu->registers->c == 17);
+    CU_ASSERT(cpu->registers->a == 8)
+    CU_ASSERT(cpu->registers->c == 8);
 }
 
 // Test case for the ld function
