@@ -1,6 +1,6 @@
 
 /**
- * machine project
+ * muj7 cpu
  *
  * ram -> 512 bytes
  * cpu -> 8 instructions, 4 registers (a,b,c,f)
