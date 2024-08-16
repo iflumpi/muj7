@@ -8,7 +8,7 @@ The muj7 architecture is based in a 8-bit CPU with 3 general-purpose registers a
 ### Registers
 - The CPU contains 3 general-purpose 8-bit registers, labeled **A**, **B**, and **C**. These registers can be used to hold data, addresses, or intermediate results.
 - The flags register (**F**) holds flags that provides information of the result of an operation (e.g., zero flag, carry flag).  
-- The program counter register (**PC**) is a special register that holds the address of next instruction to be executed.
+- The program counter register (**PC**) is a special 16-bit register that holds the address of next instruction to be executed.
 
 ### Instruction set
 The CPU supports a small but functional set of 19 instructions. These instructions are encoded as 8-bit binary values. 
