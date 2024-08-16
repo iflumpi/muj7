@@ -1,6 +1,7 @@
 NOP
 NOP
-LD A,B
-LD B,C
+LD A,0
+LD B,A
 LD A,40
+LD B,A
 JP 2
