@@ -1,3 +1,10 @@
+/**
+ * @file machine.cpp
+ *
+ * @brief Implementation of machine based in muj7 CPU and video memory 
+ *
+ * @see LICENSE for licensing details.
+ */
 
 #include <math.h>
 #include <SDL2/SDL.h>
@@ -87,5 +94,4 @@ int main(int argc, char** argv)
 
     return 0;
 }
-
 

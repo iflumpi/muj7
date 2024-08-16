@@ -1,17 +1,10 @@
-
 /**
- * muj7 cpu
+ * @file muj7cpu.h
  *
- * ram -> 512 bytes
- * cpu -> 8 instructions, 4 registers (a,b,c,f)
- *  - ld r, r'
- *  - ld r, (b)
- *  - add r, r'
- *  - sub r, r'
- *  - jp arg
- *  - jpz arg
- *  - halt
- **/
+ * @brief Implementation of muj7cpu structures and functions 
+ *
+ * @see LICENSE for licensing details.
+ */
 
 #include "muj7cpu.h"
 

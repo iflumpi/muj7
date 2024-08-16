@@ -1,10 +1,20 @@
+/**
+ * @file muj7debugger.c
+ *
+ * @brief Implementation of a debugger for muj7 programs
+ *
+ * Provides a vi-like TUI to load and debug binary files containing muj7 programs 
+ * It uses ncurses library to implement the tui
+ *
+ * @see LICENSE for licensing details.
+ */
 
 #include <ctype.h>
 #include <ncurses.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include "../helper/muj7helper.h"
+#include "helper/muj7helper.h"
 
 struct TuiContext
 {

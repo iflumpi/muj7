@@ -1,3 +1,11 @@
+/**
+ * @file muj7helper.cpp
+ *
+ * @brief Implementation of helper methods for muj7 toolset 
+ *
+ * @see LICENSE for licensing details.
+ */
+
 #include "muj7helper.h"
 
 #include <stdio.h>
