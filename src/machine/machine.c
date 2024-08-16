@@ -3,8 +3,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_events.h>
 
-#include "../cpu/muj7cpu.h"
-#include "../helper/muj7helper.h"
+#include "cpu/muj7cpu.h"
+#include "helper/muj7helper.h"
 
 const int SCREEN_WIDTH = 320;
 const int SCREEN_HEIGHT = 200;
@@ -32,22 +32,27 @@ int refresh_screen(struct CPU* cpu, SDL_Window* main_window)
     return 0;
 }
 
-int main()
+int main(int argc, char** argv)
 { 
-    SDL_Window* main_window = SDL_CreateWindow("machine", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
-    SDL_Event event;
+    if(argc <= 1)
+    {
+        printf("Usage: %s binary_file\n\n", argv[0]);
+        return 1;
+    }
 
     struct CPU* cpu = create_cpu(65536);
+    load_binary(cpu, argv[1]);
+
     for(int i=0; i<VIDEO_MEMORY_SIZE; i++)
         cpu->ram[i + VIDEO_MEMORY_START] = 0;
-    load_binary(cpu, "../../examples/program_2.bin");
+
+    SDL_Window* main_window = SDL_CreateWindow("muj7 machine", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+    SDL_Event event;
 
     int p_status = 1;
     uint64_t ticks = SDL_GetTicks64();
     uint64_t cycles = 0;
-
     int value = 0;
-
     while(p_status)
     {
         execute(cpu);
