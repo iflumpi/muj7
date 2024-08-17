@@ -24,29 +24,30 @@ The CPU supports a small but functional set of 19 instructions. These instructio
 - 0x08: **SUB C**
 - 0x09: **STORE A,[AB]**
 - 0x0A: **STORE A,[BC]**
-- 0x0B: **INC A**
-- 0x0C: **INC B**
-- 0x0D: **INC C**
-- 0x0E: **DEC A**
-- 0x0F: **DEC B**
-- 0x10: **DEC C**
 - 0x0B: **JP address**
 - 0x0C: **JPZ address**
+- 0x0D: **HALT**
+- 0x0E: **INC A**
+- 0x0F: **INC B**
+- 0x10: **INC C**
+- 0x11: **DEC A**
+- 0x12: **DEC B**
+- 0x13: **DEC C**
 
 
 ## muj7 tools
 
 ### CPU Emulator
-The CPU emulator simulates the behavior of the muj7 CPU, allowing you to run muj7 machine code on your local machine without the need for physical hardware. It accurately replicates the execution of instructions and the state of the CPU, making it a useful tool for testing and development.
+The CPU emulator simulates the behavior of the muj7 CPU, allowing to run muj7 machine code on a local machine. It accurately replicates the execution of instructions and the state of the CPU.
 
 ### Assembler
-The assembler converts assembly code written for the muj7 architecture into machine code that can be executed by the muj7 CPU. It supports all the instructions of the muj7 architecture and can handle labels and variables.
+The assembler converts assembly code written for the muj7 architecture into machine code that can be executed by the muj7 CPU. It supports all the instructions of the muj7 architecture.
 
 ### Debugger
 The debugger is a VI-like TUI that allows to step through the execution of muj7 machine code, inspect memory and registers, and analyze the state of the CPU during execution. It provides a valuable tool for debugging and optimizing code for the muj7 architecture.
 
 ### Machine Emulator
-The machine emulator provides a simulated environment for running programs in an emulator of a machine with muj7 CPU and video memory for displaying output. It allows you to test your code in a realistic environment and see the results of your programs visually.
+The machine emulator provides a simulated environment for running programs in an emulator of a machine with muj7 CPU and video memory for displaying output. It allows to test muj7 code in a realistic environment and see the results of programs visually.
 
 ## Usage
 
